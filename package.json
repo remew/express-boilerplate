@@ -25,7 +25,8 @@
   "name": "express-boilerplate",
   "private": true,
   "scripts": {
-    "build": "npm-run-all -s clean build:server",
+    "build": "npm-run-all -s clean build:server build:browser",
+    "build:browser": "webpack",
     "build:server": "tsc",
     "clean": "rm -rf build"
   },
