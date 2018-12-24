@@ -1,5 +1,18 @@
 #!/usr/bin/env node
 
+import chokidar from 'chokidar';
+const watcher = chokidar.watch('.');
+watcher.on('ready', () => {
+  console.log('watcher has been ready');
+  watcher.on('all', (...args) => {
+    Object.keys(require.cache).forEach(id => {
+      if (/routes/.test(id)) {
+        delete require.cache[id];
+      }
+    });
+  });
+});
+
 /**
  * Module dependencies.
  */
