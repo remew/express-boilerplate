@@ -31,7 +31,8 @@
     "build": "npm-run-all -s clean build:server build:browser",
     "build:browser": "webpack",
     "build:server": "tsc",
-    "clean": "rm -rf build"
+    "clean": "rm -rf build",
+    "serve:browser": "webpack-dev-server"
   },
   "repository": "https://github.com/remew/express-boilerplate.git",
   "version": "0.0.0"
