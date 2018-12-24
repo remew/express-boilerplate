@@ -6,7 +6,7 @@ module.exports = {
   mode: 'development',
   devtool: 'inline-source-map',
   entry: {
-    index: './browser/index.ts',
+    index: ['normalize.css', './browser/index.ts'],
   },
   output: {
     filename: '[name].[hash].js',
@@ -23,6 +23,13 @@ module.exports = {
               transpileOnly: true,
             },
           },
+        ],
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
         ],
       },
     ],
