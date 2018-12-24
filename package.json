@@ -1,12 +1,12 @@
 {
-  "name": "express-boilerplate",
-  "version": "0.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/remew/express-boilerplate.git",
   "author": "remew <foolishremew@gmail.com>",
-  "license": "MIT",
-  "private": true,
   "devDependencies": {
     "typescript": "^3.2.2"
-  }
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "name": "express-boilerplate",
+  "private": true,
+  "repository": "https://github.com/remew/express-boilerplate.git",
+  "version": "0.0.0"
 }
